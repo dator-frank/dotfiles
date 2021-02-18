@@ -32,5 +32,5 @@ Simply add the paths you want to include in the PATHS variable given in paths.co
 ## Screenshots
 ![Screenshot 1](https://i.imgur.com/yOupBQH.jpg "")
 ![Screenshot 2](https://i.imgur.com/fFfrfcu.jpg "")
-
+![Screenshot 3](https://i.imgur.com/lMZ6WNr.png "")
 
