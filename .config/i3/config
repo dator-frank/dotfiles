@@ -12,7 +12,7 @@ bindsym $mod+n border normal
 font Termsynu 10
 floating_modifier $mod
 
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec $TERM
 
 # Window kill command
 bindsym $mod+Shift+q kill
@@ -224,10 +224,7 @@ mode "$mode_screen_layout" {
 exec --no-startup-id nitrogen --restore;
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nm-applet
-# exec --no-startup-id xfce4-power-manager
-# exec --no-startup-id pamac-tray
-# exec --no-startup-id clipit
-exec --no-startup-id ~/scripts/screenlayout/default.sh
+# exec --no-startup-id ~/scripts/screenlayout/default.sh
 exec --no-startup-id setxkbmap fi
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -288,13 +285,5 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-#bar {
-#	status_command bash ~/.config/polybar/launch.sh --blocks
-#}
-
 bindsym $mod+Shift+t exec Thunar
-# bindsym $mod+Shift+l exec i3lock-fancy -gpt PASSWORD
-bindsym $mod+t exec urxvt -e ranger
-
-bindsym $mod+Shift+m exec --no-startup-id $HOME/bin/byt-bild
-
+bindsym $mod+t exec $TERM -e ranger

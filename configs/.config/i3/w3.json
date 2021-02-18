@@ -1,0 +1,80 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "none",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 336,
+       "width": 560,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "fh@fharch:~",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^URxvt$",
+       // "instance": "^urxvt$",
+       // "title": "^fh\\@fharch\\:\\~$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splitv split container with 2 children
+    "border": "none",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 336,
+               "width": 560,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "fh@fharch:~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^URxvt$",
+               // "instance": "^urxvt$",
+               // "title": "^fh\\@fharch\\:\\~$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 336,
+               "width": 560,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "fh@fharch:~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^URxvt$",
+               // "instance": "^urxvt$",
+               // "title": "^fh\\@fharch\\:\\~$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
