@@ -5,17 +5,7 @@ read RUN
 
 collect() {
 	echo "Reading paths..."
-#	typeset -A PATHS
-#
-#	while read LINE
-#	do 
-#		if [ echo $LINE | grep -F = &>/dev/null ]
-#		then 
-#			PATH=$(echo "$LINE" | cut -d '=' -f 1)
-#			PATHS[$PATH]=$(echo "$LINE" | cut -d '=' -f 2-)
-#   fi
-#	done < paths.conf
-  source paths.conf
+	source paths.conf
 
 	if [ ! -d "./configs" ]
 	then
