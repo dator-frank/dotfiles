@@ -1,0 +1,2 @@
+#!/bin/sh
+./opt/linux-dwarf-pack/linux-dwarf-pack.sh

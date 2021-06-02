@@ -2,7 +2,7 @@ export PS1="\[\033[38;5;7m\][\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;12m\]\u
 
 eval "$(thefuck --alias)"
 
-export PATH="${PATH}:${HOME}/.local/bin/:${HOME}/.yarn/bin/"
+export PATH="${PATH}:${HOME}/.local/bin/:${HOME}/.yarn/bin/:${HOME}/.npm-global/bin"
 
 # powerline-daemon -q
 # POWERLINE_BASH_CONTINUATION=1
@@ -17,4 +17,5 @@ export LS_COLORS
 # Aliases
 alias ls='ls --color=auto'
 alias la='ls -lah'
+alias steam_jailed='firejail --noprofile --blacklist=/sys/class/hidraw/ steam'
 

@@ -1,7 +1,7 @@
 set $mod Mod1
 
 new_window none
-new_float normal
+default_floating_border normal
 
 hide_edge_borders none
 
@@ -71,7 +71,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+# bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -259,12 +259,10 @@ mode "$mode_screen_tv" {
 }
 
 # Autostart applications
+exec --no-startup-id /$HOME/scripts/monitors.sh on on off
 exec --no-startup-id nitrogen --restore;
-exec --no-startup-id picom -b --experimental-backends
+# exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nm-applet
-# exec --no-startup-id xfce4-power-manager
-# exec --no-startup-id pamac-tray
-# exec --no-startup-id clipit
 exec --no-startup-id setxkbmap fi
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -326,6 +324,39 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+Shift+t exec Thunar
-bindsym $mod+t exec $term -e ranger
+set $mode_keyboard_layout Keyboard layout: (e) EurKey (f) Finnish
+mode "$mode_keyboard_layout" {
+        bindsym e exec --no-startup-id setxkbmap eu, mode "default", exec notify-send EurKey
+        bindsym f exec --no-startup-id setxkbmap fi, mode "default", exec notify-send Finnish
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+Shift+h mode "$mode_keyboard_layout"
 
+bindsym $mod+t mode "$mode_terminal_theme"
+set $mode_terminal_theme Terminal theme: (f) Font (c) Colour
+mode "$mode_terminal_theme" {
+        bindsym f mode "$mode_terminal_font" 
+        bindsym c mode "$mode_terminal_colour" 
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+set $mode_terminal_font Terminal font: (t) termsyn (h) Hack
+mode "$mode_terminal_font" { 
+        bindsym t exec jscritty -f termsyn, mode "default"
+        bindsym h exec jscritty -f hack, mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+set $mode_terminal_colour Terminal colours: (d) dark (l) light
+mode "$mode_terminal_colour" {
+        bindsym d exec jscritty -t dark, mode "default"
+        bindsym l exec jscritty -t light, mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+t exec Thunar
+bindsym $mod+period exec rofimoji -a type --clipboarder xclip --typer xdotool
+bindsym --release $mod+Shift+s exec scrot -s ~/Pictures/Screenshots/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png  < $f && notify-send Bopped!'
+bindsym $mod+Shift+w exec scrot -u ~/Pictures/Screenshots/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png  < $f && notify-send Bopped current window!'

@@ -51,7 +51,7 @@ case $3 in
     xrandr --output $TV --mode $RES_1080 --pos 3840x0 ;; 
   
   4k)
-    xrandr --output $TV --mode $RES_4K --pos 3840x0 --rate 144 --scale 2x2 ;;
+    xrandr --output $TV --mode $RES_4K --pos 3840x0 --rate 30 --scale 0.5x0.5 ;;
 
   off)
     xrandr --output $TV --off ;;

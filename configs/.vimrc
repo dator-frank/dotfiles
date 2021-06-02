@@ -7,6 +7,7 @@ set mouse=a
 set nu
 " set timeoutlen=0 
 " set ttimeoutlen=1000
+set wildmode=longest,list
 
 call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree'
@@ -21,6 +22,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'epilande/vim-react-snippets'
   Plug 'iamcco/coc-tailwindcss'
   Plug 'SirVer/ultisnips'
+  Plug 'rust-lang/rust.vim'
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 nnoremap <C-n> :NERDTreeFocus<CR>
