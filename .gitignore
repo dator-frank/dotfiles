@@ -1,1 +1,5 @@
 backup/
+configs/scripts/work
+collect.sh
+install.sh
+

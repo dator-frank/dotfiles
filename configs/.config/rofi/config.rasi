@@ -7,8 +7,10 @@
  *
  */
 
+ @theme "/dev/null"
+
 configuration {
-    font:               "Misc Termsynu 8"; 
+    font:               "Misc Termsyn 8"; 
     show-icons:         false;
     icon-theme:         "Papirus";
     display-drun:       "";
@@ -30,7 +32,7 @@ window {
     border:             1px;
     border-color:       #333333;
     border-radius:      0px;
-    width:              180px;
+    width:              200px;
     location:           center;
     x-offset:           0;
     y-offset:           0;
@@ -41,7 +43,6 @@ prompt {
     padding:            5px;
     background-color:   @al;
     text-color:         @ac;
-    font:               "Misc Termsynu 8";
 }
 
 entry {
@@ -79,7 +80,6 @@ listview {
 }
 
 mainbox {
-    background-color:   @al;
     border:             0px;
     border-radius:      0px;
     border-color:       @ac;
@@ -89,16 +89,17 @@ mainbox {
 }
 
 element {
-    background-color:   @al;
     text-color:         @fg;
     orientation:        horizontal;
     border-radius:      0px;
     padding:            5px;
+    background-color:   @bg;
 }
 
 element-icon {
     size:               12px;
     border:             0px;
+    background-color:   inherit;
 }
 
 element-text {
@@ -106,6 +107,8 @@ element-text {
     horizontal-align:   0;
     vertical-align:     0.5;
     margin:             0px 0px 0px 0px;
+    text-color:         @fg;
+    background-color:   inherit;
 }
 
 element selected {

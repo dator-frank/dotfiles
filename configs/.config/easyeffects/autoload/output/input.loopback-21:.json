@@ -1,0 +1,6 @@
+{
+    "device": "input.loopback-21",
+    "device-description": "NI Audio 6 Outputs 1/2",
+    "device-profile": "",
+    "preset-name": "120Hz Cut"
+}

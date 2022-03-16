@@ -1,0 +1,6 @@
+{
+    "device": "output.loopback-23",
+    "device-description": "NI Audio 6 Input 1",
+    "device-profile": "",
+    "preset-name": " Noise Cancel + Stereo"
+}

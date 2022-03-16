@@ -1,20 +1,21 @@
 let mapleader = " "
 
+set t_Co=256
 set laststatus=2 
 set noshowmode
 set encoding=UTF-8
 set mouse=a
 set nu
-set timeoutlen=5
-set ttimeoutlen=5
-set nottimeout
 set wildmode=longest,list
 
 " Tabs as 2 spaces
 set ai
-set expandtab
 set tabstop=2
 set shiftwidth=2
+set expandtab
+
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
 
 call plug#begin('~/.vim/plugged')
   " Plug 'preservim/nerdtree'
@@ -47,6 +48,7 @@ nnoremap <silent><leader>l :Buffers<CR>
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <C-A> :Ga<CR>
 nnoremap ` :Marks<CR>
+nnoremap <C-m> :make<CR>
 
 " Custom commands
 command Ga Git add %:p

@@ -79,8 +79,10 @@ XClock*hourColor:   rgba:e3/e7/ed/ff
 XClock*minuteColor: rgba:e3/e7/ed/ff
 XClock*secondColor: rgba:e3/e7/ed/ff
 
-!Xft.antialias:  true
-!Xft.hinting:    true
-!Xft.hintstyle:  hintslight
-!Xft.lcdfilter:  lcdlegacy
-!Xft.rgba:       rgb:
+Xcursor.theme: mycursor
+
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.hintstyle:  hintfull
+Xft.lcdfilter:  lcdlegacy
+Xft.rgba:       rgb

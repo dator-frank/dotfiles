@@ -2,8 +2,10 @@ export PS1="\[\033[38;5;7m\][\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;12m\]\u
 
 eval "$(thefuck --alias)"
 
-export PATH="${PATH}:${HOME}/.local/bin/:${HOME}/.yarn/bin/:${HOME}/.npm-global/bin"
-
+export PATH="${PATH}:${HOME}/.local/bin/:${HOME}/.yarn/bin/:${HOME}/.npm-global/bin:${HOME}/scripts:${HOME}/bin:${HOME}/.cargo/bin"
+export SUDO_EDITOR=/usr/bin/nvim
+export PROMPT_DIRTRIM=3
+# export MOZ_ENABLE_WAYLAND=1
 # powerline-daemon -q
 # POWERLINE_BASH_CONTINUATION=1
 # POWERLINE_BASH_SELECT=1
@@ -15,7 +17,21 @@ LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
 export LS_COLORS
 
 # Aliases
-alias ls='ls --color=auto'
-alias la='ls -lah'
+alias ls='exa'
+alias la='ls -lag'
+alias ll='ls -l'
+alias lt='ls -l --sort modified'
 alias steam_jailed='firejail --noprofile --blacklist=/sys/class/hidraw/ steam'
+alias vim='nvim'
+alias se='sudoedit'
+alias wttr='curl v2.wttr.in?M && curl wttr.in?M'
+alias t='jscritty'
+alias terminal-large-font='jscritty -f sudo -s 14'
+alias terminal-default-font='jscritty -f termsyn -s 11'
+alias kf="killall /usr/lib/firefox/firefox"
+alias alacritty="vblank_mode=1 alacritty"
+alias eu="setxkbmap eu"
+# Bind
 
+# Vars
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
